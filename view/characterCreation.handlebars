@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Creation</title>
+</head>
+<body>
+  <h1>Character Creation</h1>
+  <form action="/createCharacter" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="gender">Gender:</label>
+    <input type="radio" id="gender-male" name="gender" value="male" required>
+    <label for="gender-male">Male</label>
+    <input type="radio" id="gender-female" name="gender" value="female" required>
+    <label for="gender-female">Female</label>
+    <br>
+    <label for="appearance">Appearance:</label>
+    <textarea id="appearance" name="appearance" rows="3" required></textarea>
+    <br>
+    <label for="skills">Skills and Abilities:</label>
+    <textarea id="skills" name="skills" rows="3" required></textarea>
+    <br>
+    <label for="class">Class:</label>
+    <select id="class" name="class" required>
+      <option value="warrior">Gunner</option>
+      <option value="mage">Shipwright</option>
+      <option value="rogue">Fighter</option>
+    </select>
+    <br>
+    <label for="specialItems">Special Items:</label>
+    <input type="text" id="specialItems" name="specialItems">
+    <br>
+    <input type="submit" value="Create Character">
+  </form>
+</body>
+</html>
