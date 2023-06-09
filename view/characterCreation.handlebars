@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Creation</title>
+</head>
+<body>
+  <h1>Character Creation</h1>
+  <form action="/createCharacter" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+    <label for="class">Class:</label>
+    <select id="class" name="class">
+      <option value="warrior">Gunner</option>
+      <option value="mage">Swordsman</option>
+      <option value="rogue">Shipwright</option>
+    </select>
+    <br>
+    <input type="submit" value="Create Character">
+  </form>
+</body>
+</html>
