@@ -16,17 +16,10 @@
       "description": "Ranged weapons users who is experienced with multiple types of ranged weapons."
     }
   ],
-  "weaponChoices": [
+
+  "weaponChoices-GunMan": [
     {
       "name": "Cutlass",
-      "type": "Melee"
-    },
-    {
-      "name": "Axe",
-      "type": "Melee"
-    },
-    {
-      "name": "Rapier",
       "type": "Melee"
     },
     {
@@ -37,5 +30,56 @@
       "name": "Pistol",
       "type": "Ranged"
     }
+  ],
+  "weaponChoices-Swordsman": [
+    {
+      "name": "Cutlass",
+      "type": "Melee"
+    },
+    {
+      "name": "Rapier",
+      "type": "Melee"
+    },
+    {
+      "name": "Axe",
+      "type": "Melee"
+    },
+    {
+      "name": "Pistol",
+      "type": "Ranged"
+    }
+  ],
+  "weaponChoices-ShipWright": [
+    {
+      "name": "Cutlass",
+      "type": "Melee"
+    },
+    {
+      "name": "Axe",
+      "type": "Melee"
+    },
+    {
+      "name": "Cannon",
+      "type": "Range"
+    },
+    {
+      "name": "Pistol",
+      "type": "Range"
+    }
+  ],
+
+/* sub classes for main classes */
+
+  "special-classes": [
+    {
+      
+    },
+    {
+      
+    },
+    {
+      
+    }
   ]
+
 }
