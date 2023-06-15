@@ -1,0 +1,13 @@
+<!-- gameplayOne.handlebars -->
+<div id="game-container">
+  <div id="character-icon"></div> <!-- add character icons -->
+  <div id="background-image"></div> <!-- add the pirate background --> 
+  <div id="choices-container">
+    <h2>Make a choice:</h2>
+    <ul>
+      {{#each choices}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
