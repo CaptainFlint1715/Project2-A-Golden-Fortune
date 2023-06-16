@@ -1,85 +1,11 @@
 {
-  "characterClasses": [
-    {
-      "name": "Gun Man",
-      "description": "Ranged weapons users who is experienced with multiple types of ranged weapons.",
-      "abilities": [
-
-      ]
-    },
-    {
-      "name": "Shipwright",
-      "description": "Pirate who knows the in and outs the Ship, the ship builder. Average combat skills."
-    },
-    {
-      "name": "Swordsman",
-      "description": "Ranged weapons users who is experienced with multiple types of ranged weapons."
-    }
+  "classes": [
+    { "name": "Gunner" },
+    { "name": "Carpenter" },
+    { "name": "Rigging" }
   ],
-
-  "weaponChoices-GunMan": [
-    {
-      "name": "Cutlass",
-      "type": "Melee"
-    },
-    {
-      "name": "Musket",
-      "type": "Ranged"
-    },
-    {
-      "name": "Pistol",
-      "type": "Ranged"
-    }
-  ],
-  "weaponChoices-Swordsman": [
-    {
-      "name": "Cutlass",
-      "type": "Melee"
-    },
-    {
-      "name": "Rapier",
-      "type": "Melee"
-    },
-    {
-      "name": "Axe",
-      "type": "Melee"
-    },
-    {
-      "name": "Pistol",
-      "type": "Ranged"
-    }
-  ],
-  "weaponChoices-ShipWright": [
-    {
-      "name": "Cutlass",
-      "type": "Melee"
-    },
-    {
-      "name": "Axe",
-      "type": "Melee"
-    },
-    {
-      "name": "Cannon",
-      "type": "Range"
-    },
-    {
-      "name": "Pistol",
-      "type": "Range"
-    }
-  ],
-
-/* sub classes for main classes */
-
-  "special-classes": [
-    {
-      
-    },
-    {
-      
-    },
-    {
-      
-    }
+  "weapons": [
+    { "name": "Pistol" },
+    { "name": "Sword" }
   ]
-
 }
