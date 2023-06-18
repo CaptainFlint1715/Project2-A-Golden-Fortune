@@ -74,7 +74,8 @@
     {
       "text": "riddle input",
       "scene_id": 13,
-      "triggered_scene_id": 80000000,
+      "correct_scene_id": 14,
+      "incorrect_scene_id": 65, 
       "story_text": "input riddle"
     },
     {
