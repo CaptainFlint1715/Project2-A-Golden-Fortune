@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ User.name }}'s Profile</title>
+</head>
+<body>
+  <h1>{{ User.name }}'s Profile</h1>
+  {{#if CharacterStory.length}}
+  <h2>Past Adventures:</h2>
+  <ul>
+    {{#each storyData}}
+      <li>
+        <h3>Character: {{ Character.name }}</h3>
+        <ul>
+          {{#each CharacterChoice}}
+            <li>{{ Choice.story_text }}</li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+  </ul>
+  {{/if}}
+
+  <button>Start New Adventure!</button>
+
+  <script src="app.js"></script>
+</body>
+</html>

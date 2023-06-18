@@ -5,7 +5,7 @@ const withAuth = require('../../utils/auth');
 // saves selected character ID to current session
 router.post('/select', withAuth, async (req, res) => {
   try {
-    const {character_id } = req.body
+    const { character_id } = req.body
 
     req.session.character_id = character_id;
 
