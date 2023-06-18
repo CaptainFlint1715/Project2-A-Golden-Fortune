@@ -1,6 +1,7 @@
 const User = require('./User');
 const Character = require('./Character');
-const Storyline = require('./Storyline')
+const Scene = require('./Scene')
+const Choice = require('./Choice')
 
 User.hasMany(Character, {
   foreignKey: 'user_id',
@@ -11,13 +12,23 @@ Character.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Character.hasOne(Storyline, {
-  foreignKey: 'character_id',
+Scene.hasMany(Choice, {
+  foreignKey: 'scene_id',
   onDelete: 'CASCADE'
 })
 
-Storyline.belongsTo(Character, {
-  foreignKey: 'character_id'
+Choice.belongsTo(Scene, {
+  foreignKey: 'scene_id'
+})
+
+Choice.belongsTo(Scene, {
+  foreignKey: 'triggered_scene_id',
+  as: 'triggeredScene'
 });
 
-module.exports = { User, Character, Storyline };
+Scene.hasMany(Choice, {
+  foreignKey: 'triggered_scene_id',
+  as: 'triggeringChoices'
+});
+
+module.exports = { User, Character, Scene, Choice };
