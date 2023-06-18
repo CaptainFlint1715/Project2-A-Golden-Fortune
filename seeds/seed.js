@@ -1,8 +1,12 @@
 const sequelize = require('../config/connection');
-const { User, Character } = require('../models');
+const { User, Character, CharacterStory, Scene, Choice } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const characterData = require('./characterData.json');
+const characterStoryData = require('./characterStoryData.json');
+const sceneData = require('./sceneData.json');
+const choiceData = require('./choiceData.json');
+
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,12 +16,10 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const character of characterData) {
-    await Character.create({
-      ...character,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  const characters = await Character.bulkCreate(characterData);  
+  const characterStories = await CharacterStory.bulkCreate(characterStoryData)
+  const scenes = await Scene.bulkCreate(sceneData)
+  const choices = await Choice.bulkCreate(choiceData)
 
   process.exit(0);
 };
