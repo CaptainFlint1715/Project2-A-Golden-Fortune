@@ -1,0 +1,22 @@
+  <title>Create Character</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Create a New Character</h1>
+
+  <form action="/character/create" method="POST">
+    <label for="characterName">Character Name:</label>
+    <input type="text" id="characterName" name="characterName" required>
+
+    <label for="characterGender">Gender:</label>
+    <select id="characterGender" name="characterGender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- Add a hidden input field for user ID -->
+    <input type="hidden" name="userId" value="{{userId}}">
+
+    <button type="submit">Create</button>
+  </form>
