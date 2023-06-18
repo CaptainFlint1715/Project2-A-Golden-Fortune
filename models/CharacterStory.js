@@ -11,7 +11,7 @@ CharacterStory.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    character_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
