@@ -2,11 +2,13 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Gameplay</title>
+  <title>Scene</title>
   <link rel="stylesheet" href="/css/gameplay.css">
   <script src="/js/gameplay.js"></script>
 </head>
+
 <body>
   <div class="container">
     <div class="character-icon">
@@ -19,14 +21,24 @@
     <div class="background-image">
       <img src="/images/background-image.png" alt="Background Image">
     </div>
+    {{#if sceneData.Choice}}
     <div class="storyline-choices">
+    
       <h3>Choose Your Path:</h3>
       <ul>
-        <li><a href="#" onclick="chooseOption(1)">Option 1</a></li>
-        <li><a href="#" onclick="chooseOption(2)">Option 2</a></li>
-        <li><a href="#" onclick="chooseOption(3)">Option 3</a></li>
+        {{#each sceneData.Choice}}
+        <li>
+          <button class="choice-option" data-triggered-scene="{{ this.triggered_scene_id }}"
+            id ="{{ this.id }}" type="choose">
+            {{ this.text }}
+          </button>
+        </li>
+        {{/each}}
       </ul>
     </div>
+    {{/if}}
+
   </div>
 </body>
+
 </html>

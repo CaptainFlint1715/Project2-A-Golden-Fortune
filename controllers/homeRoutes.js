@@ -15,7 +15,7 @@ router.get('/scene/:id', async (req, res) => {
       include: [
         {
           model: Choice,
-          attributes: ['text', 'scene_id', 'triggered_scene_id'],
+          attributes: ['id', 'text', 'scene_id', 'triggered_scene_id'],
           where: {
             scene_id: currentSceneId
           }

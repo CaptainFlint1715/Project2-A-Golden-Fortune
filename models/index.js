@@ -23,12 +23,10 @@ Choice.belongsTo(Scene, {
 
 Choice.belongsTo(Scene, {
   foreignKey: 'triggered_scene_id',
-  as: 'triggeredScene'
 });
 
 Scene.hasMany(Choice, {
   foreignKey: 'triggered_scene_id',
-  as: 'triggeringChoices'
 });
 
 // CharacterStory model
