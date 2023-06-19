@@ -1,0 +1,365 @@
+[
+    {
+      "text": "hide",
+      "scene_id": 2,
+      "triggered_scene_id": 3,
+      "story_text": "hid"
+    },
+    {
+      "text": "claim to be wealthy son of Carolina governor",
+      "scene_id": 3,
+      "triggered_scene_id": 4,
+      "story_text": "claimed to be wealthy son of Carolina governor"
+    },
+    {
+      "text": "reunite with father",
+      "scene_id": 4,
+      "triggered_scene_id": 5,
+      "story_text": "reunited with father"
+    },
+    {
+      "text": "take ransom and join pirates",
+      "scene_id": 4,
+      "triggered_scene_id": 6,
+      "story_text": "took ransom and joined pirates"
+    },
+    {
+      "text": "pretend to be a cook",
+      "scene_id": 3,
+      "triggered_scene_id": 7,
+      "story_text": "pretended to be a cook"
+    },
+    {
+      "text": "fight pirates",
+      "scene_id": 2,
+      "triggered_scene_id": 8,
+      "story_text": "fought pirates"
+    },
+    {
+      "text": "choose pistol 1",
+      "scene_id": 8,
+      "triggered_scene_id": 9,
+      "story_text": "chose pistol 1"
+    },
+    {
+      "text": "choose sword 1",
+      "scene_id": 8,
+      "triggered_scene_id": 10,
+      "story_text": "chose sword 1"
+    },
+    {
+      "text": "feint left",
+      "scene_id": 10,
+      "triggered_scene_id": 11,
+      "story_text": "feinted left"
+    },
+    {
+      "text": "feint right",
+      "scene_id": 10,
+      "triggered_scene_id": 12,
+      "story_text": "feinted right"
+    },
+    {
+      "text": "jump into sea",
+      "scene_id": 12,
+      "triggered_scene_id": 13,
+      "story_text": "jumped into the sea"
+    },
+    {
+      "text": "join crew as vanguard",
+      "scene_id": 12,
+      "triggered_scene_id": 19,
+      "story_text": "joined the crew as vanguard"
+    },
+    {
+      "text": "riddle input",
+      "scene_id": 13,
+      "correct_scene_id": 14,
+      "incorrect_scene_id": 65, 
+      "story_text": "input riddle"
+    },
+    {
+      "text": "try to escape maroons",
+      "scene_id": 15,
+      "triggered_scene_id": 16,
+      "story_text": "tried to escape maroons"
+    },
+    {
+      "text": "pray to the Lord",
+      "scene_id": 15,
+      "triggered_scene_id": 17,
+      "story_text": "prayed to the Lord"
+    },
+    {
+      "text": "help pirates",
+      "scene_id": 2,
+      "triggered_scene_id": 18,
+      "story_text": "helped pirates"
+    },
+    {
+      "text": "become gunner",
+      "scene_id": 18,
+      "triggered_scene_id": 19,
+      "story_text": "became gunner"
+    },
+    {
+      "text": "become rigger",
+      "scene_id": 18,
+      "triggered_scene_id": 19,
+      "story_text": "became rigger"
+    },
+    {
+      "text": "become carpenter",
+      "scene_id": 18,
+      "triggered_scene_id": 19,
+      "story_text": "became carpenter"
+    },
+    {
+      "text": "vote to resupply at Nassau",
+      "scene_id": 19,
+      "triggered_scene_id": 7,
+      "story_text": "voted to resupply at Nassau"
+    },
+    {
+      "text": "vote to pursue merchant ship",
+      "scene_id": 19,
+      "triggered_scene_id": 800000000,
+      "story_text": "voted to pursue merchant ship"
+    },
+    {
+      "text": "rope 1",
+      "scene_id": 20,
+      "triggered_scene_id": 24,
+      "story_text": "roped 1"
+    },
+    {
+      "text": "rope 2",
+      "scene_id": 20,
+      "triggered_scene_id": 48,
+      "story_text": "roped 2"
+    },
+    {
+      "text": "man sails in storm",
+      "scene_id": 48,
+      "triggered_scene_id": 49,
+      "story_text": "manned sails in storm"
+    },
+    {
+      "text": "bail water in storm",
+      "scene_id": 48,
+      "triggered_scene_id": 36,
+      "story_text": "bailed water in storm"
+    },
+    {
+      "text": "climb mountain",
+      "scene_id": 36,
+      "triggered_scene_id": 37,
+      "story_text": "climbed mountain"
+    },
+    {
+      "text": "explore Maya ruins",
+      "scene_id": 36,
+      "triggered_scene_id": 38,
+      "story_text": "explored Maya ruins"
+    },
+    {
+      "text": "eagle glyph",
+      "scene_id": 38,
+      "triggered_scene_id": 40,
+      "story_text": "eagled glyph"
+    },
+    {
+      "text": "snake glyph",
+      "scene_id": 38,
+      "triggered_scene_id": 41,
+      "story_text": "snaked glyph"
+    },
+    {
+      "text": "jaguar glyph",
+      "scene_id": 38,
+      "triggered_scene_id": 39,
+      "story_text": "jaguared glyph"
+    },
+    {
+      "text": "make for the beach",
+      "scene_id": 42,
+      "triggered_scene_id": 43,
+      "story_text": "made for the beach"
+    },
+    {
+      "text": "make for Maya village",
+      "scene_id": 42,
+      "triggered_scene_id": 44,
+      "story_text": "made for Maya village"
+    },
+    {
+      "text": "hunt jaguar",
+      "scene_id": 45,
+      "triggered_scene_id": 46,
+      "story_text": "hunted jaguar"
+    },
+    {
+      "text": "hunt boar",
+      "scene_id": 45,
+      "triggered_scene_id": 47,
+      "story_text": "hunted boar"
+    },
+    {
+      "text": "choose swords 2",
+      "scene_id": 23,
+      "triggered_scene_id": 66,
+      "story_text": "chose swords 2"
+    },
+    {
+      "text": "choose pistols 2",
+      "scene_id": 23,
+      "triggered_scene_id": 24,
+      "story_text": "chose pistols 2"
+    },
+    {
+      "text": "choose both 2",
+      "scene_id": 23,
+      "triggered_scene_id": 24,
+      "story_text": "chose both 2"
+    },
+    {
+      "text": "keep hidden booty to yourself",
+      "scene_id": 25,
+      "triggered_scene_id": 8000000,
+      "story_text": "kept hidden booty to yourself"
+    },
+    {
+      "text": "share hidden booty with crew",
+      "scene_id": 25,
+      "triggered_scene_id": 80000000,
+      "story_text": "shared hidden booty with crew"
+    },
+    {
+      "text": "battle man-o'-war",
+      "scene_id": 26,
+      "triggered_scene_id": 27,
+      "story_text": "battled man-o'-war"
+    },
+    {
+      "text": "flee the man-o'-war",
+      "scene_id": 80000000,
+      "triggered_scene_id": 800000000,
+      "story_text": "fled the man-o'-war"
+    },
+    {
+      "text": "try to outrun British",
+      "scene_id": 26,
+      "triggered_scene_id": 28,
+      "story_text": "tried to outrun the British"
+    },
+    {
+      "text": "(vanguard) claim you were forced",
+      "scene_id": 28,
+      "triggered_scene_id": 8000000,
+      "story_text": "(vanguard) claimed you were forced"
+    },
+    {
+      "text": "go to Kingston",
+      "scene_id": 800000000,
+      "triggered_scene_id": 80000000,
+      "story_text": "went to Kingston"
+    },
+    {
+      "text": "kill English Captain, free crew",
+      "scene_id": 80000000,
+      "triggered_scene_id": 33,
+      "story_text": "killed the English Captain, freed crew"
+    },
+    {
+      "text": "navigate shallow reef to the south",
+      "scene_id": 80000000,
+      "triggered_scene_id": 34,
+      "story_text": "navigated shallow reef to the south"
+    },
+    {
+      "text": "left through reef",
+      "scene_id": 34,
+      "triggered_scene_id": 35,
+      "story_text": "left through the reef"
+    },
+    {
+      "text": "right through reef",
+      "scene_id": 34,
+      "triggered_scene_id": 36,
+      "story_text": "right through the reef"
+    },
+    {
+      "text": "make for narrow straight to the southwest",
+      "scene_id": 800000000,
+      "triggered_scene_id": 7,
+      "story_text": "made for narrow straight to the southwest"
+    },
+    {
+      "text": "talk to Blackbeard",
+      "scene_id": 51,
+      "triggered_scene_id": 80000000,
+      "story_text": "talked to Blackbeard"
+    },
+    {
+      "text": "talk to Trade Boss",
+      "scene_id": 52,
+      "triggered_scene_id": 59,
+      "story_text": "talked to Trade Boss"
+    },
+    {
+      "text": "talk to Calico Jack",
+      "scene_id": 53,
+      "triggered_scene_id": 54,
+      "story_text": "talked to Calico Jack"
+    },
+    {
+      "text": "attack Spanish encampment",
+      "scene_id": 54,
+      "triggered_scene_id": 55,
+      "story_text": "attacked Spanish encampment"
+    },
+    {
+      "text": "dive for treasure",
+      "scene_id": 54,
+      "triggered_scene_id": 80000000,
+      "story_text": "dived for treasure"
+    },
+    {
+      "text": "search seaweed",
+      "scene_id": 800000000,
+      "triggered_scene_id": 56,
+      "story_text": "searched seaweed"
+    },
+    {
+      "text": "search ship",
+      "scene_id": 80000000000,
+      "triggered_scene_id": 57,
+      "story_text": "searched ship"
+    },
+    {
+      "text": "attack at night",
+      "scene_id": 59,
+      "triggered_scene_id": 60,
+      "story_text": "attacked at night"
+    },
+    {
+      "text": "pay for logwood",
+      "scene_id": 59,
+      "triggered_scene_id": 61,
+      "story_text": "paid for logwood"
+    },
+    {
+      "text": "resist British return",
+      "scene_id": 62,
+      "triggered_scene_id": 64,
+      "story_text": "resisted British return"
+    },
+    {
+      "text": "take pardon",
+      "scene_id": 62,
+      "triggered_scene_id": 63,
+      "story_text": "took pardon"
+    }
+  ]
+  
+  
