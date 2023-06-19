@@ -3,12 +3,13 @@ const { Choice, Character, CharacterStory, CharacterChoice } = require('../../mo
 const withAuth = require('../../utils/auth');
 
 // creates new CharacterStory instance and saves it's id to session
-router.post('/select', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
 
+    const selectedCharacter = await Character.findByPk(req.body.id)
 
     const newCharacterStory = await CharacterStory.create({
-      character_id: req.body.character_id,
+      character_id: selectedCharacter.id,
       user_id: req.session.user_id,
     })
     

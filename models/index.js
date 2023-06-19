@@ -7,7 +7,6 @@ const Choice = require('./Choice')
 
 User.hasMany(CharacterStory, {
   foreignKey: 'user_id',
-  onDelete: 'CASCADE'
 });
 
 CharacterStory.belongsTo(User, {
@@ -16,7 +15,6 @@ CharacterStory.belongsTo(User, {
 
 Scene.hasMany(Choice, {
   foreignKey: 'scene_id',
-  onDelete: 'CASCADE'
 })
 
 Choice.belongsTo(Scene, {
