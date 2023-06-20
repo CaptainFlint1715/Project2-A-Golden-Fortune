@@ -8,10 +8,10 @@
 </head>
 <body>
   <h1>{{ User.name }}'s Profile</h1>
-  {{#if CharacterStory.length}}
+  {{#if stories.length}}
   <h2>Past Adventures:</h2>
   <ul>
-    {{#each storyData}}
+    {{#each stories}}
       <li>
         <h3>Character: {{ Character.name }}</h3>
         <ul>
