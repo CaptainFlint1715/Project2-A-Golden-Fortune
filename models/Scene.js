@@ -16,15 +16,6 @@ Scene.init(
         text: {
             type: DataTypes.STRING,
         },
-        triggered_scene_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-            references: {
-              model: 'scene',
-              key: 'id',
-            },
-          },
-
     },
     {
         sequelize,

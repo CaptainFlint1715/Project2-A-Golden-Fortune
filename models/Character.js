@@ -18,23 +18,6 @@ Character.init(
     description: {
       type: DataTypes.STRING,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    gold: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    karma: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    prowess: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

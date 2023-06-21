@@ -10,13 +10,14 @@ router.get('/', (_, res) => {
 // scene route
 router.get('/scene/:id', async (req, res) => {
   try {
-    const sceneData = await Scene.findByPk(req.params.id, {
+    const currentSceneId = req.params.triggered_scene_id
+    const sceneData = await Scene.findByPk(currentSceneId, {
       include: [
         {
           model: Choice,
-          attributes: ['text', 'scene_id', 'triggered_scene_id'],
+          attributes: ['id', 'text', 'scene_id', 'triggered_scene_id'],
           where: {
-            scene_id: req.params.id
+            scene_id: currentSceneId
           }
         },
         {
@@ -47,13 +48,12 @@ router.get('/scene/:id', async (req, res) => {
 
 
 // user profile route
-router.get('/user', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
   try {
-    const user_id = req.session.user_id;
 
     const storyData = await CharacterStory.findAll({
       where: {
-        user_id: user_id,
+        user_id: req.session.user_id,
       },
       include: [
         {
@@ -75,9 +75,11 @@ router.get('/user', withAuth, async (req, res) => {
       ],
     });
 
+    const stories = storyData.map((story) => story.get({ plain: true }))
+
     // Pass serialized data and session flag into template
-    res.render('user', {
-      storyData,
+    res.render('profile', {
+      stories,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

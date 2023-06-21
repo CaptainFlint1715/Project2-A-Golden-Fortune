@@ -1,139 +1,138 @@
 [
     {
-      "text": "hide",
+      "text": "Hide below.",
       "scene_id": 2,
       "triggered_scene_id": 3,
       "story_text": "hid"
     },
     {
-      "text": "claim to be wealthy son of Carolina governor",
+      "text": "Reveal you are the son of the governor of the Carolina colony.",
       "scene_id": 3,
       "triggered_scene_id": 4,
       "story_text": "claimed to be wealthy son of Carolina governor"
     },
     {
-      "text": "reunite with father",
+      "text": "Reunite with father.",
       "scene_id": 4,
       "triggered_scene_id": 5,
       "story_text": "reunited with father"
     },
     {
-      "text": "take ransom and join pirates",
+      "text": "Join crew, become a gentleman of fortune.",
       "scene_id": 4,
-      "triggered_scene_id": 6,
+      "triggered_scene_id": 7,
       "story_text": "took ransom and joined pirates"
     },
     {
-      "text": "pretend to be a cook",
+      "text": "Pretend to be the cook.",
       "scene_id": 3,
       "triggered_scene_id": 7,
       "story_text": "pretended to be a cook"
     },
     {
-      "text": "fight pirates",
+      "text": "Fight pirates.",
       "scene_id": 2,
       "triggered_scene_id": 8,
       "story_text": "fought pirates"
     },
     {
-      "text": "choose pistol 1",
+      "text": "Pistol.",
       "scene_id": 8,
       "triggered_scene_id": 9,
       "story_text": "chose pistol 1"
     },
     {
-      "text": "choose sword 1",
+      "text": "Sword.",
       "scene_id": 8,
       "triggered_scene_id": 10,
       "story_text": "chose sword 1"
     },
     {
-      "text": "feint left",
+      "text": "Feint left.",
       "scene_id": 10,
       "triggered_scene_id": 11,
       "story_text": "feinted left"
     },
     {
-      "text": "feint right",
+      "text": "Feint right.",
       "scene_id": 10,
       "triggered_scene_id": 12,
       "story_text": "feinted right"
     },
     {
-      "text": "jump into sea",
+      "text": "Jump into sea.",
       "scene_id": 12,
       "triggered_scene_id": 13,
       "story_text": "jumped into the sea"
     },
     {
-      "text": "join crew as vanguard",
+      "text": "Join crew as vanguard.",
       "scene_id": 12,
       "triggered_scene_id": 19,
       "story_text": "joined the crew as vanguard"
     },
     {
-      "text": "riddle input",
+      "text": "Shadow.",
       "scene_id": 13,
-      "correct_scene_id": 14,
-      "incorrect_scene_id": 65, 
+      "triggered_scene_id": 14,
       "story_text": "input riddle"
     },
     {
-      "text": "try to escape maroons",
+      "text": "Try to gnaw through wood.",
       "scene_id": 15,
       "triggered_scene_id": 16,
       "story_text": "tried to escape maroons"
     },
     {
-      "text": "pray to the Lord",
+      "text": "Pray and wait.",
       "scene_id": 15,
       "triggered_scene_id": 17,
       "story_text": "prayed to the Lord"
     },
     {
-      "text": "help pirates",
+      "text": "Help pirates, cut down your own shipmates.",
       "scene_id": 2,
       "triggered_scene_id": 18,
       "story_text": "helped pirates"
     },
     {
-      "text": "become gunner",
+      "text": "Become gunner.",
       "scene_id": 18,
       "triggered_scene_id": 19,
       "story_text": "became gunner"
     },
     {
-      "text": "become rigger",
+      "text": "Become rigger.",
       "scene_id": 18,
       "triggered_scene_id": 19,
       "story_text": "became rigger"
     },
     {
-      "text": "become carpenter",
+      "text": "Become carpenter.",
       "scene_id": 18,
       "triggered_scene_id": 19,
       "story_text": "became carpenter"
     },
     {
-      "text": "vote to resupply at Nassau",
+      "text": "Vote to resupply at Nassau.",
       "scene_id": 19,
       "triggered_scene_id": 7,
       "story_text": "voted to resupply at Nassau"
     },
     {
-      "text": "vote to pursue merchant ship",
+      "text": "Vote to pursue merchant ship.",
       "scene_id": 19,
       "triggered_scene_id": 800000000,
       "story_text": "voted to pursue merchant ship"
     },
     {
-      "text": "rope 1",
+      "text": "Rope on the left.",
       "scene_id": 20,
       "triggered_scene_id": 24,
       "story_text": "roped 1"
     },
     {
-      "text": "rope 2",
+      "text": "Rope on the right.",
       "scene_id": 20,
       "triggered_scene_id": 48,
       "story_text": "roped 2"
@@ -182,55 +181,55 @@
     },
     {
       "text": "make for the beach",
-      "scene_id": 42,
+      "scene_id": 41,
       "triggered_scene_id": 43,
       "story_text": "made for the beach"
     },
     {
       "text": "make for Maya village",
-      "scene_id": 42,
+      "scene_id": 41,
       "triggered_scene_id": 44,
       "story_text": "made for Maya village"
     },
     {
       "text": "hunt jaguar",
-      "scene_id": 45,
+      "scene_id": 44,
       "triggered_scene_id": 46,
       "story_text": "hunted jaguar"
     },
     {
       "text": "hunt boar",
-      "scene_id": 45,
+      "scene_id": 44,
       "triggered_scene_id": 47,
       "story_text": "hunted boar"
     },
     {
-      "text": "choose swords 2",
+      "text": "A sword in each hand.",
       "scene_id": 23,
       "triggered_scene_id": 66,
       "story_text": "chose swords 2"
     },
     {
-      "text": "choose pistols 2",
+      "text": "A pistol in each hand.",
       "scene_id": 23,
       "triggered_scene_id": 24,
       "story_text": "chose pistols 2"
     },
     {
-      "text": "choose both 2",
+      "text": "A sword and a pistol.",
       "scene_id": 23,
       "triggered_scene_id": 24,
       "story_text": "chose both 2"
     },
     {
-      "text": "keep hidden booty to yourself",
-      "scene_id": 25,
+      "text": "Keep hidden booty to yourself.",
+      "scene_id": 800000,
       "triggered_scene_id": 8000000,
       "story_text": "kept hidden booty to yourself"
     },
     {
-      "text": "share hidden booty with crew",
-      "scene_id": 25,
+      "text": "Share hidden booty with crew",
+      "scene_id": 8000000,
       "triggered_scene_id": 80000000,
       "story_text": "shared hidden booty with crew"
     },
@@ -254,7 +253,7 @@
     },
     {
       "text": "(vanguard) claim you were forced",
-      "scene_id": 28,
+      "scene_id": 8000000,
       "triggered_scene_id": 8000000,
       "story_text": "(vanguard) claimed you were forced"
     },
@@ -296,43 +295,43 @@
     },
     {
       "text": "talk to Blackbeard",
-      "scene_id": 51,
+      "scene_id": 80000000,
       "triggered_scene_id": 80000000,
       "story_text": "talked to Blackbeard"
     },
     {
       "text": "talk to Trade Boss",
-      "scene_id": 52,
+      "scene_id": 50,
       "triggered_scene_id": 59,
       "story_text": "talked to Trade Boss"
     },
     {
       "text": "talk to Calico Jack",
-      "scene_id": 53,
-      "triggered_scene_id": 54,
+      "scene_id": 50,
+      "triggered_scene_id": 53,
       "story_text": "talked to Calico Jack"
     },
     {
       "text": "attack Spanish encampment",
-      "scene_id": 54,
+      "scene_id": 53,
       "triggered_scene_id": 55,
       "story_text": "attacked Spanish encampment"
     },
     {
       "text": "dive for treasure",
-      "scene_id": 54,
-      "triggered_scene_id": 80000000,
+      "scene_id": 53,
+      "triggered_scene_id": 67,
       "story_text": "dived for treasure"
     },
     {
       "text": "search seaweed",
-      "scene_id": 800000000,
+      "scene_id": 67,
       "triggered_scene_id": 56,
       "story_text": "searched seaweed"
     },
     {
       "text": "search ship",
-      "scene_id": 80000000000,
+      "scene_id": 67,
       "triggered_scene_id": 57,
       "story_text": "searched ship"
     },
@@ -345,7 +344,7 @@
     {
       "text": "pay for logwood",
       "scene_id": 59,
-      "triggered_scene_id": 61,
+      "triggered_scene_id": 62,
       "story_text": "paid for logwood"
     },
     {
@@ -359,6 +358,18 @@
       "scene_id": 62,
       "triggered_scene_id": 63,
       "story_text": "took pardon"
+    },
+    {
+      "text": "Feather.",
+      "scene_id": 13,
+      "triggered_scene_id": 65, 
+      "story_text": "input riddle"
+    },
+    {
+      "text": "Currents.",
+      "scene_id": 13,
+      "triggered_scene_id": 65, 
+      "story_text": "input riddle"
     }
   ]
   

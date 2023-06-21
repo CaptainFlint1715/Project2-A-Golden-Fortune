@@ -32,9 +32,8 @@ const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-<<<<<<< HEAD
-// Express
-=======
+
+
 app.get("/",(req,res)=>{  
   res.render("login")
 })
@@ -45,7 +44,6 @@ app.get("/homepage",(req,res)=>{
   })
 })
 
->>>>>>> hompage
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
