@@ -18,7 +18,7 @@
           {{#each sceneData.Choice}}
           <li>
             <button class="btn btn-primary choice-option" data-triggered-scene="{{ this.triggered_scene_id }}"
-              id="{{ this.id }}" type="choose">
+              data-id="{{ this.id }}" data-story-ending="{{ this.story_ending }}" type="choose">
               {{ this.text }}
             </button>
           </li>

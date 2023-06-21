@@ -10,12 +10,12 @@ router.get('/', (_, res) => {
 // scene route
 router.get('/scene/:id', async (req, res) => {
   try {
-    const currentSceneId = req.params.triggered_scene_id
+    const currentSceneId = req.params.id
     const sceneData = await Scene.findByPk(currentSceneId, {
       include: [
         {
           model: Choice,
-          attributes: ['id', 'text', 'scene_id', 'triggered_scene_id'],
+          attributes: ['id', 'text', 'scene_id', 'triggered_scene_id', 'story_ending'],
           where: {
             scene_id: currentSceneId
           }
@@ -47,7 +47,7 @@ router.get('/scene/:id', async (req, res) => {
 });
 
 
-// user profile route (this will be called on (1) 'return to home' button at the end of an adventure, also (2) after a user is created on sign up, and also (3) when a user logs in)
+// user profile route (this will be called on (1) 'return to home' button at the end of an adventure [completed], also (2) after a user is created on sign up, and also (3) when a user logs in)
 router.get('/profile', withAuth, async (req, res) => {
   try {
 

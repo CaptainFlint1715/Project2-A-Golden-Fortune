@@ -4,9 +4,10 @@ const choiceHandler = async (event) => {
 
   const button = event.target;
   const triggered_scene_id = button.getAttribute('data-triggered-scene');
+  const choiceId = button.getAttribute('data-id')
+  const storyEnding = button.getAttribute('data-story-ending')
 
   try {
-    const choiceId = button.id;
     const postResponse = await fetch('/choice', {
       method: 'POST',
       headers: {
@@ -22,23 +23,35 @@ const choiceHandler = async (event) => {
     console.log('Choice added to CharacterChoice successfully');
   } catch (err) {
     console.error('Error adding choice to CharacterChoice:', err);
-    // Perform error handling for the POST request
-    return;
   }
 
-  try {
-    const response = await fetch(`/scene/${triggered_scene_id}`);
+  if (!storyEnding) {
+    try {
+      const response = await fetch(`/scene/${triggered_scene_id}`);
 
-    if (!response.ok) {
-      throw new Error('Failed to get next scene');
+      if (!response.ok) {
+        throw new Error('Failed to get next scene');
+      }
+
+      console.log('Next scene fetched successfully');
+
+    } catch (err) {
+      console.error('Error fetching next scene:', err);
     }
+  } else {
+    try {
+      const endResponse = await fetch('/profile')
+      if (!endResponse.ok) {
+        throw new Error('Failed to get next scene');
+      }
 
-    console.log('Next scene fetched successfully');
+      console.log('Next scene fetched successfully');
 
-    // Process the response and update the scene accordingly
-  } catch (err) {
-    console.error('Error fetching next scene:', err);
-    // Perform error handling for the GET request
+      // Process the response and update the scene accordingly
+    } catch (err) {
+      console.error('Error fetching home:', err);
+      // Perform error handling for the GET request
+    }
   }
 };
 
