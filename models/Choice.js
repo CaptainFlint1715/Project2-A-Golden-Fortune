@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Choice extends Model {}
+class Choice extends Model { }
 
 Choice.init(
   {
@@ -16,8 +16,8 @@ Choice.init(
       allowNull: false,
     },
     story_text: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     scene_id: {
       type: DataTypes.INTEGER,
@@ -28,15 +28,19 @@ Choice.init(
       },
     },
     triggered_scene_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        references: {
-          model: 'scene',
-          key: 'id',
-        },
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'scene',
+        key: 'id',
+      },
     },
-    
+    story_ending: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
   },
+
   {
     sequelize,
     timestamps: false,

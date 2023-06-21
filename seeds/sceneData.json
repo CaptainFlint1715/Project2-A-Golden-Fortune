@@ -36,7 +36,7 @@
     },
     {
         "id": 9,
-        "text": "You take aim at a charging coarsair, and pull the trigger... but nothing happens. Your pistol has misfired, and you are without defense. The pirate skewers you through the stomach. Your time at sea has come to a bloody end.",
+        "text": "You take aim at a charging coarsair, and pull the trigger... but nothing happens. Your pistol has misfired, and you are without defense. The pirate skewers you through the stomach. Your brief time at sea has come to a bloody end.",
         "image": ""
     },
     {
@@ -46,12 +46,12 @@
     },
     {
         "id": 11,
-        "text": "Your feint leaves you open to the pirate's pistol hand. He steps back and fires, shooting you point-blank. Better luck in the next life!",
+        "text": "Your feint leaves you open to the pirate's pistol. He steps back and fires, shooting you point-blank. Better luck in the next life!",
         "image": ""
     },
     {
         "id": 12,
-        "text": "Your feint elicits a wild attampt to parry, leaving the pirate's pistol-wielding arm open. You slash at his left arm, severing it cleanly and disarming your foe. You notice most of the pirate crew is watching, and what's more - they are applauding your skill and bravery. They offer to let you join the crew as an honored member of the vangaurd. Will you accept, or make a desperate escape?",
+        "text": "Your feint elicits a wild attempt to parry, leaving the pirate's pistol-wielding arm open. You slash at his left arm, severing it cleanly and disarming your foe. You notice most of the pirate crew is watching, and what's more - they are applauding your skill and bravery. They offer to let you join the crew as an honored member of the vangaurd. Will you accept, or make a desperate escape?",
         "image": ""
     },
     {
@@ -101,7 +101,7 @@
     },
     {
         "id": 22,
-        "text": "You head for the gundeck and join your team on one of the cannons. Your nervous handles fumble with the match as you go to plug it into the massive piece of artillery. As the flame finds it mark you have less than a second to cry out in horror as the gun backfires, blowing you to smithereens!",
+        "text": "You head for the gundeck and join your team on one of the cannons. Your nervous handles fumble with the match as you go to plug it into the massive piece of artillery. As the flame finds its mark you have less than a second to cry out in horror as the gun backfires, blowing you to smithereens!",
         "image": ""
     },
     {
@@ -131,7 +131,7 @@
     },
     {
         "id": 28,
-        "text": "The crew steers the ship away from the approaching English threat and tries to tack hard against the opposing wind. The effort is fruitless, however, as you are quickly overtaken by the skillfully-piloted vessel and forced to raise the white flag of surrender. You've been captured. Next thing you know, you're swinging over execution dock.",
+        "text": "The crew steers the ship away from the approaching English threat and tries to tack hard against the opposing wind. The effort is fruitless, however, as you are quickly overtaken by the skillfully-piloted vessel and forced to raise the white flag of surrender. You've been captured. Next stop, the gallows. Your short pirate career ends abruptly at the unforgiving end of a rope.",
         "image": ""
     },
     {
@@ -161,12 +161,12 @@
     },
     {
         "id": 34,
-        "text": "You and your comrades venture into the labrynth of concealed coral, knowing the English have no chance of pursuing you through such perilous shallow waters. As your ship enters the deadly morass, you encounter a forked path of the narrow deep. Which way?",
+        "text": "You and your comrades venture into the labrynth of concealed coral, knowing the English have no chance of pursuing you through such perilous shallow waters. As your ship enters the deadly morass, you encounter a forked path in the narrow deep. Which way to safety?",
         "image": ""
     },
     {
         "id": 35,
-        "text": "Veering leftward, you drive forward with desperate hope. Unfortunately, the route you've chosen is studded with jagged coral, which seems to grow ever-closer to the craft's underbelly with each passing shiplength. It isn't long before an ear-rending CRACK reverberates through the ship, shaking its timbers and causing the crew to stagger. The doomed vessel lurches violently, its port side sinking down beneath the water. You are thrown over the side by the force of the impact, and - bloodied and battered by the rough coral below - you quickly find yourself in the jaws of a massive shark!",
+        "text": "Veering leftward, you drive forward with desperate hope. Unfortunately, the route you've chosen is studded with jagged coral, which seems to grow ever-closer to the craft's underbelly with each passing shiplength. It isn't long before an ear-rending CRACK! reverberates throughout the ship, shaking its timbers and causing the crew to stagger. The doomed vessel lurches violently, its port side sinking down beneath the water. You are thrown over the side by the force of the impact, and - bloodied and battered by the rough coral below - you quickly find yourself in the jaws of a massive shark!",
         "image": ""
     },
     {
