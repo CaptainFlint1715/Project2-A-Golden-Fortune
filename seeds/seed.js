@@ -1,25 +1,32 @@
 const sequelize = require('../config/connection');
-const { User, Character } = require('../models');
+const { User, Character, CharacterStory, Scene, Choice } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const characterData = require('./characterData.json');
+const characterStoryData = require('./characterStoryData.json');
+const sceneData = require('./sceneData.json');
+const choiceData = require('./choiceData.json');
+
 
 const seedDatabase = async () => {
-  await sequelize.sync({ force: true });
+  try {
+    await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
-
-  for (const character of characterData) {
-    await Character.create({
-      ...character,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+    await User.bulkCreate(userData, {
+      individualHooks: true,
+      returning: true,
     });
-  }
 
-  process.exit(0);
+    await Character.bulkCreate(characterData);
+    await Scene.bulkCreate(sceneData)
+    await Choice.bulkCreate(choiceData)
+    await CharacterStory.bulkCreate(characterStoryData)
+
+    process.exit(0);
+  } catch (err) {
+    console.error('error seeding database', err)
+    process.exit(1)
+  }
 };
 
 seedDatabase();

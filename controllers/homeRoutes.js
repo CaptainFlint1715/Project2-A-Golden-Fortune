@@ -1,68 +1,86 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { User, Character, Choice, CharacterStory, CharacterChoice } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+// homepage route
+router.get('/', (_, res) => {
+  res.render('homepage'); 
+});
+
+// scene route
+router.get('/scene/:id', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
+    const currentSceneId = req.params.triggered_scene_id
+    const sceneData = await Scene.findByPk(currentSceneId, {
       include: [
         {
-          model: User,
-          attributes: ['name'],
+          model: Choice,
+          attributes: ['id', 'text', 'scene_id', 'triggered_scene_id'],
+          where: {
+            scene_id: currentSceneId
+          }
         },
-      ],
-    });
+        {
+          model: CharacterChoice,
+          attributes: ['choice_id'],
+          where: {
+            character_story_id: req.session.character_story_id
+          }
+        },
+        {
+          model: Character,
+          attributes: ['name'],
+          where: {
+            id: req.session.character_id
+          }
+        }
+      ]
+    })
 
-    // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      projects, 
-      logged_in: req.session.logged_in 
+    res.render('scene', {
+      sceneData,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/project/:id', async (req, res) => {
-  try {
-    const projectData = await Project.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
 
-    const project = projectData.get({ plain: true });
-
-    res.render('project', {
-      ...project,
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// Use withAuth middleware to prevent access to route
+// user profile route
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+
+    const storyData = await CharacterStory.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+        {
+          model: Character,
+          attributes: ['name'],
+        },
+        {
+          model: CharacterChoice,
+          attributes: ['choice_id'],
+          include: {
+            model: Choice,
+            attributes: ['story_text'],
+          },
+        },
+      ],
     });
 
-    const user = userData.get({ plain: true });
+    const stories = storyData.map((story) => story.get({ plain: true }))
 
+    // Pass serialized data and session flag into template
     res.render('profile', {
-      ...user,
-      logged_in: true
+      stories,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
