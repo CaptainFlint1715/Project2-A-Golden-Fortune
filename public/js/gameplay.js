@@ -95,7 +95,3 @@ document.querySelectorAll('.choice-option').forEach((button) => {
 // document
 //   .querySelectorAll('.choice-option')
 //   .addEventListener('choose', choiceHandler)
-
-  document.querySelectorAll('.choice-option').forEach((button) => {
-    button.addEventListener('click', choiceHandler);
-  });

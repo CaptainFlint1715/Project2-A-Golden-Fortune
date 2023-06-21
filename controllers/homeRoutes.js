@@ -47,7 +47,7 @@ router.get('/scene/:id', async (req, res) => {
 });
 
 
-// user profile route
+// user profile route (this will be called on (1) 'return to home' button at the end of an adventure, also (2) after a user is created on sign up, and also (3) when a user logs in)
 router.get('/profile', withAuth, async (req, res) => {
   try {
 
