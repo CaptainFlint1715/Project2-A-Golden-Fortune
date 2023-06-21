@@ -7,39 +7,37 @@
   <title>Scene</title>
   <link rel="stylesheet" href="/css/gameplay.css">
   <script src="/js/gameplay.js"></script>
-  <script src="/js/typewriter.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <div class="character-icon">
-      <img src="/images/character-icon.png" alt="Character Icon">
+    <div class="row">
+      <div class="col-md-4 bg-success">
+        <div class="text-conversation">
+          <p>{{ sceneData.text }}</p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <img src="{{ sceneData.image }}" alt="Scene Image" class="img-fluid">
+      </div>
     </div>
-    <div class="text-conversation">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <p>Nulla quis cursus felis, id molestie est. Aenean in dolor malesuada, faucibus nibh ut, fermentum lacus.</p>
-    </div>
-    <div class="background-image">
-      <img src="/images/background-image.png" alt="Background Image">
-    </div>
+
     {{#if sceneData.Choice}}
-    <div class="storyline-choices">
-    
-      <h3>Choose Your Path:</h3>
-      <ul>
-        {{#each sceneData.Choice}}
-        <li>
-          <button class="choice-option" data-triggered-scene="{{ this.triggered_scene_id }}"
-            id ="{{ this.id }}" type="choose">
-            {{ this.text }}
-          </button>
-        </li>
-        {{/each}}
-      </ul>
+    <div class="row">
+      <div class="col-md-12 mt-3">
+        <h3>Choose Your Path:</h3>
+        <ul class="list-unstyled">
+          {{#each sceneData.Choice}}
+          <li>
+            <button class="btn btn-primary choice-option" data-triggered-scene="{{ this.triggered_scene_id }}"
+              data-id="{{ this.id }}" data-story-ending="{{ this.story_ending }}" type="choose">
+              {{ this.text }}
+            </button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
     </div>
     {{/if}}
 
   </div>
-</body>
-
-</html>
