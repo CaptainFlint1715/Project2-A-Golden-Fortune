@@ -128,7 +128,7 @@
   {
     "text": "Vote to pursue merchant ship.",
     "scene_id": 19,
-    "triggered_scene_id": 800000000,
+    "triggered_scene_id": null,
     "story_text": "voted to pursue merchant ship"
   },
   {
@@ -235,8 +235,8 @@
   },
   {
     "text": "Share hidden booty with crew",
-    "scene_id": 8000000,
-    "triggered_scene_id": 80000000,
+    "scene_id": null,
+    "triggered_scene_id": null,
     "story_text": "shared hidden booty with crew"
   },
   {
@@ -247,8 +247,8 @@
   },
   {
     "text": "flee the man-o'-war",
-    "scene_id": 80000000,
-    "triggered_scene_id": 800000000,
+    "scene_id": null,
+    "triggered_scene_id": null,
     "story_text": "fled the man-o'-war"
   },
   {
@@ -259,25 +259,25 @@
   },
   {
     "text": "(vanguard) claim you were forced",
-    "scene_id": 8000000,
-    "triggered_scene_id": 8000000,
+    "scene_id": null,
+    "triggered_scene_id": null,
     "story_text": "(vanguard) claimed you were forced"
   },
   {
     "text": "go to Kingston",
-    "scene_id": 800000000,
-    "triggered_scene_id": 80000000,
+    "scene_id": null,
+    "triggered_scene_id": null,
     "story_text": "went to Kingston"
   },
   {
     "text": "kill English Captain, free crew",
-    "scene_id": 80000000,
+    "scene_id": null,
     "triggered_scene_id": 33,
     "story_text": "killed the English Captain, freed crew"
   },
   {
     "text": "navigate shallow reef to the south",
-    "scene_id": 80000000,
+    "scene_id": null,
     "triggered_scene_id": 34,
     "story_text": "navigated shallow reef to the south"
   },
@@ -295,14 +295,14 @@
   },
   {
     "text": "make for narrow straight to the southwest",
-    "scene_id": 800000000,
+    "scene_id": null,
     "triggered_scene_id": 7,
     "story_text": "made for narrow straight to the southwest"
   },
   {
     "text": "talk to Blackbeard",
-    "scene_id": 80000000,
-    "triggered_scene_id": 80000000,
+    "scene_id": null,
+    "triggered_scene_id": null,
     "story_text": "talked to Blackbeard"
   },
   {

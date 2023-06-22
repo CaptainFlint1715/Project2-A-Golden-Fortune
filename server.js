@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // routes to characterRoutes //
-const characterRoutes = require('./characterRoutes');
+// const characterRoutes = require('./characterRoutes');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -37,7 +37,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(characterRoutes);
+
+// app.use(characterRoutes);
 
 // Routes
 app.use(routes);

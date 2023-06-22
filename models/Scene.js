@@ -14,7 +14,7 @@ Scene.init(
             type: DataTypes.STRING,
         },
         text: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
         },
     },
     {
