@@ -2,22 +2,22 @@
     {
         "id": 1,
         "text": "Standing on the deck of a passenger vessel, you feel a cool sea breeze against your skin, providing a welcome relief from the searing Carribean sun overhead. The rhythmic sound of waves lulls you into a sense of tranquility.Suddenly, your moment of peace is shattered by a growing clamor from the quarterdeck. 'Pirates!' The revelation sends waves of dread throughout the ship.",
-        "image": ""
+        "image": "public/assets/scene1.jpg"
     },
     {
         "id": 2,
         "text": "You look to port and see a 30-gun frigate fast-approaching, black flag blowing in the wind, the cruel visage of the Jolly Roger gleaming in the sun. As the crew scrambles to repel the inevitable boarding party, the pirate vessel barges against the ship. Grappling hooks sail over the rail, followed by scores of hardened buccaneers. Which course of action will you take?",
-        "image": ""
+        "image": "public/assets/scene2.jpg"
     },
     {
         "id": 3,
         "text": "As the vicious sounds of battle begin to subside above, you hear footsteps pounding nearer and nearer to your hiding place. The door is kicked open, and you find yourself staring down the barrel of a pistol. 'Are you some kind of coward?' your discoverer sneers with derision. How can you convince the pirates not to kill you?",
-        "image": ""
+        "image": "public/assets/scene3.jpg"
     },
     {
         "id": 4,
         "text": "With this revelation, you convince the pirates you're worth more to them alive. Before long, you are a captive aboard their ship, on your way to Charlestown to collect what promises to be a hefty ransom. Upon arriving, the pirates make clear their demands, and a quantity of 20,000 pounds sterling is delivered into their hands. You are free to join your father - but, what if....?",
-        "image": ""
+        "image": "public/assets/4.jpg"
     },
     {
         "id": 5,
@@ -27,12 +27,12 @@
     {
         "id": 7,
         "text": "The crew decides to sail to Nassau, the pirate capital of the West Indies, to refit and resupply. What opportunities might you find in this strange place?",
-        "image": ""
+        "image": "public/assets/scene7.jpg"
     },
     {
         "id": 8,
         "text": "Which weapon will you wield?",
-        "image": ""
+        "image": "public/assets/scene8.jpg"
     },
     {
         "id": 9,
@@ -42,7 +42,7 @@
     {
         "id": 10,
         "text": "Steel meets steel as you enter into a heated duel with the nearest buccaneer. Your adversary wields a cutlass in his right hand and a pistol in his left. What's your move? ",
-        "image": ""
+        "image": "public/assets/scene10.jpg"
     },
     {
         "id": 11,
@@ -57,12 +57,12 @@
     {
         "id": 13,
         "text": "You hear a rumbling voice echoing from the deep. Poseidon himself has come to offer you salvation. But first, you must answer his riddle: 'I'm the part of the bird that's not in the sky. I can swim in the ocean and yet remain dry. What am I?'",
-        "image": ""
+        "image": "public/assets/scene13.jpg"
     },
     {
         "id": 14,
         "text": "Bravo! A giant manatee arrives, and you position yourself atop of it. It takes you swiftly across the waves and deliveres you safely to land!",
-        "image": ""
+        "image": "public/assets/scene14.jpg"
     },
     {
         "id": 15,
@@ -97,7 +97,7 @@
     {
         "id": 21,
         "text": "As the pirate ship releases its first broadside, a thundering shock rocks the vessel. Shards of timber fly and you hear screams from the gundeck. One of the cannons has misfired catastrophically, blowing a hole in the side. Your quick thinking and handyness with a hammer are instrumental in patching up the hole, saving the ship and allowing the crew to maintain the hunt. ",
-        "image": ""
+        "image": "public/assets/scene21.jpg"
     },
     {
         "id": 22,
@@ -112,7 +112,7 @@
     {
         "id": 24,
         "text": "You and your crewmates succesfully board the vessel and ultimately overwhelm the stout resistance of its desperate crew. You've taken your first prize. Victory is yours!",
-        "image": ""
+        "image": "public/assets/scene24.jpg"
     },
     {
         "id": 25,
@@ -137,7 +137,7 @@
     {
         "id": 29,
         "text": "hanged",
-        "image": ""
+        "image": "public/assets/scene29.jpg"
     },
     {
         "id": 30,
@@ -152,7 +152,7 @@
     {
         "id": 32,
         "text": "(thief) become wealthy merchant",
-        "image": ""
+        "image": "public/assets/scene32.jpg"
     },
     {
         "id": 33,
@@ -202,7 +202,7 @@
     {
         "id": 42,
         "text": "flee ruins",
-        "image": ""
+        "image": "public/assets/scene42.jpg"
     },
     {
         "id": 43,
@@ -247,7 +247,7 @@
     {
         "id": 51,
         "text": "Blackbeard",
-        "image": ""
+        "image": "public/assets/51.jpg"
     },
     {
         "id": 52,
@@ -262,7 +262,7 @@
     {
         "id": 54,
         "text": "sail to Spanish wrecks",
-        "image": ""
+        "image": "public/assets/54.jpg"
     },
     {
         "id": 55,
@@ -297,7 +297,7 @@
     {
         "id": 61,
         "text": "return to Nassau, fort strengthened",
-        "image": ""
+        "image": "public/assets/scene61.jpg"
     },
     {
         "id": 62,
@@ -327,6 +327,6 @@
     {
         "id": 67,
         "text": "Diving deep into the clear blue water, you swim confidently toward the wrecks. But where to focus your search? Look for treasure still in the ruins of the ship, or traverse the tangled seaweed sure to hold some measure of spilled silver and gold?",
-        "image": ""
+        "image": "public/assets/scene67.jpg"
     }
 ]
