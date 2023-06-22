@@ -1,11 +1,36 @@
 {
   "classes": [
-    { "name": "Gunner" },
-    { "name": "Carpenter" },
-    { "name": "Rigging" }
+    {
+      "id": 1,
+      "name": "Gunner",
+      "description": "The Gunner is a skilled marksman specializing in long-range combat."
+    },
+    {
+      "id": 2,
+      "name": "Carpenter",
+      "description": "The Carpenter is a master craftsman, capable of building and repairing structures."
+    },
+    {
+      "id": 3,
+      "name": "Rigging",
+      "description": "The Rigging expert excels in climbing and working with ropes and sails."
+    },
+    {
+      "id": 4,
+      "name": "Vanguard",
+      "description": "Advance warrior from the main force."
+    }
   ],
   "weapons": [
-    { "name": "Pistol" },
-    { "name": "Sword" }
+    {
+      "id": 1,
+      "name": "Pistol",
+      "description": "Advance warrior from the main force."
+    },
+    {
+      "id": 2,
+      "name": "Sword",
+      "description": "Advance warrior from the main force."
+    }
   ]
 }
