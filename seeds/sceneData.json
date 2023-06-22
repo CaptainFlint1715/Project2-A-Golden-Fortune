@@ -232,17 +232,17 @@
     {
         "id": 48,
         "text": "Soon after pulling the rope, you realize you've made a terrible mistake, causing the ship's course to veer off its intended path. Dark storm clouds loom ominously on the horizon, and the winds howl with an eerie intensity. The tempest engulfs the vessel, waves crashing against its hull with relentless fury. Despite your desperate efforts to regain control, the ship is at the mercy of the raging storm, tossed mercilessly amidst towering swells and violent gusts. Do you stay put in the rigging and try to redeem yourself, or climb below to help bail water?",
-        "image": ""
+        "image": "public/assets/48.jpg"
     },
     {
         "id": 49,
         "text": "As the storm rages on, its wrath intensifies, unleashing its full fury upon the ill-fated ship. The relentless winds buffet against your body, threatening to knock you off balance.  In a heart-stopping moment, a violent gust knocks you from the your precarious perch, your screams swallowed by the storm as you plummet helpessly to your death.",
-        "image": ""
+        "image": "public/assets/49.jpg"
     },
     {
         "id": 50,
         "text": "Stepping into the bustling waterhole, a lively ambiance washes over you like a warm embrace. The air is thick with the mingling scents of rum, salted sea breeze, and the raucous laughter of sailors and locals. Gritty tales of high-seas adventures fill the air, accompanied by the rhythmic strumming of a sailor's shanty on a worn guitar. The dimly lit room reveals a diverse crowd, their weathered faces hinting at the hardships endured upon the open waters. You find a spot at the bar, surrounded by fellow adventurers and rogues, eager to partake in the camaraderie and tales of the Caribbean's wild exploits.",
-        "image": ""
+        "image": "public/assets/50.jpg"
     },
     {
         "id": 51,
@@ -252,7 +252,7 @@
     {
         "id": 52,
         "text": "Trade Boss",
-        "image": ""
+        "image": "public/assets/52.jpg"
     },
     {
         "id": 53,
@@ -277,17 +277,17 @@
     {
         "id": 57,
         "text": "In the depths of the sunken ship, you discover a dazzling fortune in silver, its gleam captivating your senses. With each piece collected, the weight of possibility and triumph grows. As you rise to the surface, the treasure clutched tightly in your grasp, you embrace the promise of a new life, forever changed by the riches you have claimed.",
-        "image": ""
+        "image": "public/assets/57.jpg"
     },
     {
         "id": 58,
         "text": "retire to Florida a wealthy man or woman",
-        "image": ""
+        "image": "public/assets/58.jpg"
     },
     {
         "id": 59,
         "text": "You find yourself engaged in conversation with the influential Nassau trade boss. As she regales you with tales of opportunity, she convinces you of a plan to sail to a nearby logging camp to procure lumber sorely needed to repair the damaged fort. Determined, you set sail towards the camp, eager to make a name for yourself rebuilding the dilapidated stronghold. You're instructed to use the money given you by Nassau's trade boss to purchase the logwood, but... if you take the wood by force you can keep that profit for yourself...",
-        "image": ""
+        "image": "public/assets/59.jpg"
     },
     {
         "id": 60,
