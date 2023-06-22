@@ -514,5 +514,11 @@
     "scene_id": 66,
     "story_ending": true,
     "story_text": "input riddle"
+  },
+  {
+    "text": "Continue.",
+    "scene_id": 1,
+    "triggered_scene_id": 2,
+    "story_text": null
   }
 ]

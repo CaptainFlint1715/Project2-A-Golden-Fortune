@@ -21,11 +21,11 @@ Choice.belongsTo(Scene, {
   foreignKey: 'scene_id'
 })
 
-Choice.hasOne(Scene, {
+Choice.belongsTo(Scene, {
   foreignKey: 'triggered_scene_id',
 });
 
-Scene.belongsTo(Choice, {
+Scene.hasMany(Choice, {
   foreignKey: 'triggered_scene_id',
 });
 
@@ -39,14 +39,16 @@ CharacterChoice.belongsTo(CharacterStory, {
   foreignKey: 'character_story_id',
 });
 
-CharacterChoice.belongsTo(Choice, {
-  foreignKey: 'choice_id',
-});
-
 // Choice model
 Choice.hasMany(CharacterChoice, {
   foreignKey: 'choice_id',
 });
+
+CharacterChoice.belongsTo(Choice, {
+  foreignKey: 'choice_id',
+});
+
+
 
 
 module.exports = { User, CharacterStory, CharacterChoice, Scene, Choice };

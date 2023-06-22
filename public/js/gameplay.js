@@ -3,9 +3,11 @@ const choiceHandler = async (event) => {
   event.preventDefault();
 
   const button = event.target;
-  const triggered_scene_id = button.getAttribute('data-triggered-scene');
+  console.log('hello')
+
   const choiceId = button.getAttribute('data-id')
-  const storyEnding = button.getAttribute('data-story-ending')
+  // const trigger = button.getAttribute('data-trigger')
+
 
   try {
     const postResponse = await fetch('/api/choice', {
@@ -25,34 +27,8 @@ const choiceHandler = async (event) => {
     console.error('Error adding choice to CharacterChoice:', err);
   }
 
-  if (!storyEnding) {
-    try {
-      location.replace(`/scene/${triggered_scene_id}`);
+  // document.location.replace(`/scene/${trigger}`)
 
-      if (!response.ok) {
-        throw new Error('Failed to get next scene');
-      }
-
-      console.log('Next scene fetched successfully');
-
-    } catch (err) {
-      console.error('Error fetching next scene:', err);
-    }
-  } else {
-    try {
-      const endResponse = await fetch('/profile')
-      if (!endResponse.ok) {
-        throw new Error('Failed to get next scene');
-      }
-
-      console.log('Next scene fetched successfully');
-
-      // Process the response and update the scene accordingly
-    } catch (err) {
-      console.error('Error fetching home:', err);
-      // Perform error handling for the GET request
-    }
-  }
 };
 
 document.querySelector('#choose-path').addEventListener('click', choiceHandler);

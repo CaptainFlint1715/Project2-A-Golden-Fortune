@@ -34,15 +34,15 @@ app.set('view engine', 'handlebars');
 
 
 
-app.get("/",(req,res)=>{  
-  res.render("login")
-})
+// app.get("/",(req,res)=>{  
+//   res.render("login")
+// })
 
-app.get("/homepage",(req,res)=>{
-  res.render("homepage",{
-    heading:"Golden fortune",
-  })
-})
+// app.get("/homepage",(req,res)=>{
+//   res.render("homepage",{
+//     heading:"Golden fortune",
+//   })
+// })
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
