@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character, Choice, CharacterStory, CharacterChoice } = require('../models');
+const { User, Scene, Choice, CharacterStory, CharacterChoice } = require('../models');
 const withAuth = require('../utils/auth');
 
 // homepage route
@@ -7,39 +7,43 @@ router.get('/', (_, res) => {
   res.render('homepage'); 
 });
 
+router.get('/scene', async (req, res) => {
+  try {
+    // Fetch all scene data from the database
+    const sceneData = await Scene.findAll();
+
+    // Log the scene data
+    console.log(sceneData);
+
+    // Send a response if needed
+    res.sendStatus(200);
+  } catch (err) {
+    // Handle errors
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
+
 // scene route
 router.get('/scene/:id', async (req, res) => {
+  
   try {
     const currentSceneId = req.params.id
-    const sceneData = await Scene.findByPk(currentSceneId, {
+    const scene = await Scene.findByPk(currentSceneId, {
       include: [
         {
           model: Choice,
           attributes: ['id', 'text', 'scene_id', 'triggered_scene_id', 'story_ending'],
-          where: {
-            scene_id: currentSceneId
-          }
-        },
-        {
-          model: CharacterChoice,
-          attributes: ['choice_id'],
-          where: {
-            character_story_id: req.session.character_story_id
-          }
-        },
-        {
-          model: Character,
-          attributes: ['name'],
-          where: {
-            id: req.session.character_id
-          }
         }
+        
       ]
     })
-
+    // const data = sceneData.get({ plain:true })
+    // console.log(data)
+    const sceneData = scene.get({ plain:true })
     res.render('scene', {
       sceneData,
-      logged_in: req.session.logged_in,
+      // logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -72,6 +76,7 @@ router.get('/profile', withAuth, async (req, res) => {
             attributes: ['story_text'],
           },
         },
+        console.log(storyData.text)
       ],
     });
 
@@ -98,3 +103,17 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+// {
+        //   model: CharacterChoice,
+        //   attributes: ['choice_id'],
+        //   where: {
+        //     character_story_id: req.session.character_story_id
+        //   }
+        // },
+        // {
+        //   model: Character,
+        //   attributes: ['name'],
+        //   where: {
+        //     id: req.session.character_id
+        //   }
+        // }

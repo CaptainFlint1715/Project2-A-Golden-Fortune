@@ -8,7 +8,7 @@ const choiceHandler = async (event) => {
   const storyEnding = button.getAttribute('data-story-ending')
 
   try {
-    const postResponse = await fetch('/choice', {
+    const postResponse = await fetch('/api/choice', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const choiceHandler = async (event) => {
 
   if (!storyEnding) {
     try {
-      const response = await fetch(`/scene/${triggered_scene_id}`);
+      location.replace(`/scene/${triggered_scene_id}`);
 
       if (!response.ok) {
         throw new Error('Failed to get next scene');
@@ -55,9 +55,8 @@ const choiceHandler = async (event) => {
   }
 };
 
-document.querySelectorAll('.choice-option').forEach((button) => {
-  button.addEventListener('click', choiceHandler);
-});
+document.querySelector('#choose-path').addEventListener('click', choiceHandler);
+
 
 
 

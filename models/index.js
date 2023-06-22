@@ -1,5 +1,5 @@
 const User = require('./User');
-const Character = require('./Character');
+// const Character = require('./Character');
 const CharacterChoice = require('./CharacterChoice');
 const CharacterStory = require('./CharacterStory')
 const Scene = require('./Scene')
@@ -21,11 +21,11 @@ Choice.belongsTo(Scene, {
   foreignKey: 'scene_id'
 })
 
-Choice.belongsTo(Scene, {
+Choice.hasOne(Scene, {
   foreignKey: 'triggered_scene_id',
 });
 
-Scene.hasMany(Choice, {
+Scene.belongsTo(Choice, {
   foreignKey: 'triggered_scene_id',
 });
 
@@ -49,4 +49,4 @@ Choice.hasMany(CharacterChoice, {
 });
 
 
-module.exports = { User, Character, CharacterStory, CharacterChoice, Scene, Choice };
+module.exports = { User, CharacterStory, CharacterChoice, Scene, Choice };
