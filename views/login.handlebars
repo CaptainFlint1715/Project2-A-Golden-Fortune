@@ -1,18 +1,47 @@
- <section id="LoginPage">
- <title>Login Page</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <h1>Login</h1>
-  <form action="/login" method="POST">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+<div class="main-container">
+  <div class="row align-center">
+    <div class="col-md-6">
+      <div class="signup-container">
+        <h2>Signup</h2>
+        <p>Create your account now</p>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+        <form class="form signup-form">
+          <div class="form-group">
+            <label for="name-signup">Name</label>
+            <input class="form-input" type="text" id="name-signup" />
+          </div>
+          <div class="form-group">
+            <label for="email-signup">Email</label>
+            <input class="form-input" type="text" id="email-signup" />
+          </div>
+          <div class="form-group">
+            <label for="password-signup">Password</label>
+            <input class="form-input" type="password" id="password-signup" />
+          </div>
+          <button class="submit" type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
 
-    <button type="submit">Login</button>
-  </form>
+    <div class="col-md-6">
+      <div class="login-container">
+        <h2>Login</h2>
+        <p>Login here</p>
 
-  <p>Don't have an account? <a href="/signup">Sign up</a></p>
-  </section>
+        <form class="form login-form">
+          <div class="form-group">
+            <label for="email-login">Email</label>
+            <input class="form-input" type="text" id="email-login" />
+          </div>
+          <div class="form-group">
+            <label for="password-login">Password</label>
+            <input class="form-input" type="password" id="password-login" />
+          </div>
+          <button class="submit" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/login.js"></script>
