@@ -1,8 +1,12 @@
 [
     {
-      "name": "Character Choice 1",
-      "description": "This is the first character choice.",
-      "user_id": 2000,
-      "character_id": 2000
+        "character_story_id": 1,
+        "user_id": 1,
+        "choice_id": 1
+    },
+    {
+        "character_story_id": 1,
+        "user_id": 1,
+        "choice_id": 2
     }
 ]

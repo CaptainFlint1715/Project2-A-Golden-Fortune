@@ -17,7 +17,7 @@
     {
         "id": 4,
         "text": "With this revelation, you convince the pirates you're worth more to them alive. Before long, you are a captive aboard their ship, on your way to Charlestown to collect what promises to be a hefty ransom. Upon arriving, the pirates make clear their demands, and a quantity of 20,000 pounds sterling is delivered into their hands. You are free to join your father - but, what if....?",
-        "image": "public/assets/4.jpg"
+        "image": "/assets/img/piratewall.jpg"
     },
     {
         "id": 5,
@@ -222,7 +222,7 @@
     {
         "id": 46,
         "text": "With the skills honed from years spent among the Maya, you embark on a daring quest to prove your worth.. Armed with your newfound knowledge of the jungle and the sacred rituals, you track the elusive jaguar with fierce determination. Moving stealthily through the underbrush, you blend seamlessly with the wilderness. You come upon your ferocious quarry, and as the jaguar coils to strike, you hurl your javelin with all your might. You return to the settlement a champion, and the villagers erupt with awe and reverence. You have become a legendary jaguar warrior, and will wear the pelt of the beast until your dying day, standing tall as an embodiment of the strength and spirt of the great predators that rule the jungle.",
-        "image": ""
+        "image": "/assets/img/jaguar.jpg"
     },
     {
         "id": 47,
@@ -328,5 +328,6 @@
         "id": 67,
         "text": "Diving deep into the clear blue water, you swim confidently toward the wrecks. But where to focus your search? Look for treasure still in the ruins of the ship, or traverse the tangled seaweed sure to hold some measure of spilled silver and gold?",
         "image": "public/assets/scene67.jpg"
+
     }
 ]

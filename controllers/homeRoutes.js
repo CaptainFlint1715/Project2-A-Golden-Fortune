@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 
 // homepage route
 router.get('/', (_, res) => {
-  res.render('homepage'); 
+  res.render('homepage');
 });
 
 router.get('/scene', async (req, res) => {
@@ -26,24 +26,23 @@ router.get('/scene', async (req, res) => {
 
 // scene route
 router.get('/scene/:id', async (req, res) => {
-  
+
   try {
     const currentSceneId = req.params.id
-    const scene = await Scene.findByPk(currentSceneId, {
-      include: [
-        {
-          model: Choice,
-          attributes: ['id', 'text', 'scene_id', 'triggered_scene_id', 'story_ending'],
-        }
-        
-      ]
+    const scene = await Scene.findByPk(currentSceneId)
+    const choices = await Choice.findAll({
+      where: {
+        scene_id: currentSceneId
+      }
     })
-    // const data = sceneData.get({ plain:true })
-    // console.log(data)
-    const sceneData = scene.get({ plain:true })
+
+    const sceneData = scene.get({ plain: true })
+    const choiceData = choices.map(choice => choice.get({ plain: true }))
+
     res.render('scene', {
       sceneData,
-      // logged_in: req.session.logged_in,
+      choiceData,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -52,22 +51,21 @@ router.get('/scene/:id', async (req, res) => {
 
 
 // user profile route (this will be called on (1) 'return to home' button at the end of an adventure [completed], also (2) after a user is created on sign up, and also (3) when a user logs in)
-router.get('/profile', withAuth, async (req, res) => {
-  try {
+router.get('/profile', async (req, res) => {
+  console.log('hello')
+  console.log(req.session.user_id)
 
+
+  try {
+    const userId = req.session.user_id
+    const userData = await User.findByPk(userId, {
+      attributes: ['name']
+    })
     const storyData = await CharacterStory.findAll({
       where: {
-        user_id: req.session.user_id,
+        user_id: userId,
       },
       include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-        {
-          model: Character,
-          attributes: ['name'],
-        },
         {
           model: CharacterChoice,
           attributes: ['choice_id'],
@@ -76,14 +74,21 @@ router.get('/profile', withAuth, async (req, res) => {
             attributes: ['story_text'],
           },
         },
-        console.log(storyData.text)
       ],
     });
 
-    const stories = storyData.map((story) => story.get({ plain: true }))
+    const stories = storyData.map((story) => {
+      const characterChoices = story.CharacterChoices.map((characterChoice) =>
+        characterChoice.Choice.story_text
+      );
+      const combinedText = characterChoices.join(', ');
+      return { ...story.get({ plain: true }), combinedText };
+    });
+
 
     // Pass serialized data and session flag into template
     res.render('profile', {
+      userData: userData.toJSON(),
       stories,
       logged_in: req.session.logged_in,
     });

@@ -1,48 +1,89 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+  <style>
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+    }
 
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="project-name">project name:</label>
-        <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
-      <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
-      </div>
-      <div class="form-group">
-        <label for="project-desc">description:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
+    .container-fluid {
+      background-image: url('assets/img/piratewall.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 20px;
+    }
 
-  {{#if projects.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+    .text-bubble {
+      background-color: black;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: orange;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
 
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
+    .start-button {
+      background-color: black;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: orange;
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .past-adventures {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: right;
+    }
+  </style>
+
+<body>
+  <div class="container-fluid">
+    <div class="text-bubble">
+      <h2>Welcome, {{userData.name}}!</h2>
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div>
 
-<script src="./js/profile.js"></script>
+    <div class="start-button">
+      <a href="#" onclick="location.replace('/scene/1')" id="start-adventure-button" style="color: orange;">Start New Adventure</a>
+    </div>
+
+    <div class="past-adventures">
+      <h3 style="color: orange;">Past Adventures:</h3>
+
+      {{#if stories.length}}
+      <div class="text-bubble">
+        <ul style="list-style-type: none; padding: 0;">
+          {{#each stories}}
+          <li>{{combinedText}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      {{else}}
+      <p class="text-bubble">No past adventures.</p>
+      {{/if}}
+    </div>
+  </div>
+</body>
+
+
+
+
+

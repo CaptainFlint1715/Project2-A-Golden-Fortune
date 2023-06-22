@@ -20,3 +20,69 @@
 
     <button type="submit">Create</button>
   </form>
+
+  <!-- gameplay.handlebars -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Scene</title>
+  <link rel="stylesheet" href="/css/gameplay.css">
+  <script src="/js/gameplay.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 bg-success">
+              {{ this.text }}
+            </button>
+          </li>
+{{/each}}
+        </ul>
+      </div>
+    </div>
+    {{else if sceneData.id === 2}}
+    <div class="row">
+      <div class="col-md-12 mt-3">
+        <h3>Choose Your Character:</h3>
+        <ul class="list-unstyled">
+          {{#each characterData.classes}}
+          <li>
+            <div>
+              <h4>{{ this.name }}</h4>
+              <p>{{ this.description }}</p>
+              <input type="radio" name="character" id="{{ this.name }}">
+              <label for="{{ this.name }}">Select</label>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+        <button class="btn btn-primary character-select" type="choose">
+          Continue
+        </button>
+      </div>
+    </div>
+    {{else if sceneData.id === 2}}
+    <div class="row">
+      <div class="col-md-12 mt-3">
+        <h3>Choose Your Character:</h3>
+        <ul class="list-unstyled">
+          {{#each characterData.classes}}
+          <li>
+            <div>
+              <h4>{{ this.name }}</h4>
+              <p>{{ this.description }}</p>
+              <input type="radio" name="character" id="{{ this.name }}">
+              <label for="{{ this.name }}">Select</label>
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+        <button class="btn btn-primary character-select" type="choose">
+          Continue
+        </button>
+      </div>
+    </div>
+    {{/if}}

@@ -17,7 +17,7 @@ Choice.init(
     },
     story_text: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     scene_id: {
       type: DataTypes.INTEGER,
