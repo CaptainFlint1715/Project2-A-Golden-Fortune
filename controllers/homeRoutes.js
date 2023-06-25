@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { Sequelize } = require('sequelize');
 const { User, Scene, Choice, CharacterStory, CharacterChoice } = require('../models');
-// const withAuth = require('../utils/auth');
 
 // homepage route
 router.get('/', (_, res) => {
