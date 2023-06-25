@@ -1,21 +1,20 @@
 // executes when choice is selected
 const choiceHandler = async (event) => {
   event.preventDefault();
-
+  console.log('HOWDY COWPOKES')
   const button = event.target;
-  console.log('hello')
 
-  const choiceId = button.getAttribute('data-id')
-  // const trigger = button.getAttribute('data-trigger')
+  const choice_id = button.getAttribute('data-id')
+  const trigger = button.getAttribute('data-trigger')
 
 
   try {
-    const postResponse = await fetch('/api/choice', {
+    const postResponse = await fetch('/api/story/choice', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ id: choiceId }),
+      body: JSON.stringify({ choice_id }),
     });
 
     if (!postResponse.ok) {
@@ -27,11 +26,16 @@ const choiceHandler = async (event) => {
     console.error('Error adding choice to CharacterChoice:', err);
   }
 
-  // document.location.replace(`/scene/${trigger}`)
+  document.location.replace(`/scene/${trigger}`)
 
 };
 
-document.querySelector('#choose-path').addEventListener('click', choiceHandler);
+const chooseButtons = document.querySelectorAll('#choose-path');
+
+chooseButtons.forEach(button => {
+  button.addEventListener('click', choiceHandler);
+});
+
 
 
 

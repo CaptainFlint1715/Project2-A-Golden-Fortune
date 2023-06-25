@@ -1,5 +1,4 @@
 const User = require('./User');
-// const Character = require('./Character');
 const CharacterChoice = require('./CharacterChoice');
 const CharacterStory = require('./CharacterStory')
 const Scene = require('./Scene')
@@ -29,17 +28,15 @@ Scene.hasMany(Choice, {
   foreignKey: 'triggered_scene_id',
 });
 
-// CharacterStory model
 CharacterStory.hasMany(CharacterChoice, {
   foreignKey: 'character_story_id',
+  as: 'characterChoices', // Add this line
 });
 
-// CharacterChoice model
 CharacterChoice.belongsTo(CharacterStory, {
   foreignKey: 'character_story_id',
 });
 
-// Choice model
 Choice.hasMany(CharacterChoice, {
   foreignKey: 'choice_id',
 });

@@ -13,8 +13,7 @@ header, .project:not(:last-child) {
 }
 
 .no-button:hover {
-  color: #065b83;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .dollar-amount {
@@ -25,4 +24,8 @@ header, .project:not(:last-child) {
 
 .custom-bg-teal {
   background-color: #025353;
+}
+
+a {
+  text-decoration: none;
 }
