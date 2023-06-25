@@ -22,14 +22,7 @@
     }
   },
   "production": {
-    "username": "rje3uh269xyqaymt",
-    "password": "mkjyk1g3c8dd4wgr",
-    "database": "r1k0ybxgur579e3k",
-    "host": "z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "port": 3306,
-    "dialect": "mysql",
-    "dialectOptions": {
-      "ssl": "Amazon RDS"
-    }
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
