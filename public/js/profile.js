@@ -1,5 +1,8 @@
+
 const newAdventure = async (event) => {
     event.preventDefault()
+    const button = event.target
+    const userId = button.getAttribute('data-user')
 
     try {
         const postResponse = await fetch('/api/story', {
@@ -7,14 +10,16 @@ const newAdventure = async (event) => {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ id: req.session.user_id }),
+          body: JSON.stringify({ id: userId }),
         });
     
         if (!postResponse.ok) {
           throw new Error('Failed to add CharacterStory');
         }
     
-        console.log('Character successfully');
+        
+        document.location.replace('/scene/1')
+        console.log('Character added successfully');
       } catch (err) {
         console.error('Error adding CharacterStory:', err);
       }

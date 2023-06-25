@@ -1,20 +1,20 @@
 const router = require('express').Router();
 const { Choice, CharacterStory, CharacterChoice } = require('../../models');
-const withAuth = require('../../utils/auth');
 
 // creates new CharacterStory instance and saves it's id to session
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
 
     const newCharacterStory = await CharacterStory.create({
-      // character_id: selectedCharacter.id,
       user_id: req.body.id,
     })
+
+    req.session.character_story_id = newCharacterStory.id
+    req.session.logged_in = true;
     
     req.session.save(() => {
-      req.session.character_story_id = newCharacterStory.id
     })
-
+    
     res.status(200).json(newCharacterStory);
   } catch (err) {
     res.status(400).json(err);
@@ -22,9 +22,11 @@ router.post('/', withAuth, async (req, res) => {
 })
 
 // adds a selected choice to the CharacterChoice table
-router.post('/choice', withAuth, async (req, res) => {
+router.post('/choice', async (req, res) => {
+  const storySess = req.session.character_story_id
+
   try {
-    const selectedChoice = await Choice.findByPk(req.body.id)
+    const selectedChoice = await Choice.findByPk(req.body.choice_id)
     
     if (!selectedChoice) {
       // Handle the case when the choice is not found
@@ -32,10 +34,10 @@ router.post('/choice', withAuth, async (req, res) => {
     }
     
     const newCharacterChoice = await CharacterChoice.create({
-      character_story_id: req.session.character_story_id,
-      choice_id: selectedChoice.id,
+      character_story_id: storySess,
+      choice_id: req.body.choice_id
       
-    });  
+    }); 
 
     res.status(200).json(newCharacterChoice);
   } catch (err) {

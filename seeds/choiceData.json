@@ -72,7 +72,7 @@
     "story_text": "jumped into the sea"
   },
   {
-    "text": "Join crew as vanguard.",
+    "text": "Join crew.",
     "scene_id": 12,
     "triggered_scene_id": 19,
     "story_text": "joined the crew as vanguard"
@@ -102,22 +102,10 @@
     "story_text": "helped pirates"
   },
   {
-    "text": "Become gunner.",
+    "text": "Join the pirates.",
     "scene_id": 18,
     "triggered_scene_id": 19,
     "story_text": "became gunner"
-  },
-  {
-    "text": "Become rigger.",
-    "scene_id": 18,
-    "triggered_scene_id": 19,
-    "story_text": "became rigger"
-  },
-  {
-    "text": "Become carpenter.",
-    "scene_id": 18,
-    "triggered_scene_id": 19,
-    "story_text": "became carpenter"
   },
   {
     "text": "Vote to resupply at Nassau.",
@@ -128,7 +116,7 @@
   {
     "text": "Vote to pursue merchant ship.",
     "scene_id": 19,
-    "triggered_scene_id": null,
+    "triggered_scene_id": 20,
     "story_text": "voted to pursue merchant ship"
   },
   {
@@ -517,8 +505,20 @@
   },
   {
     "text": "Continue.",
+    "scene_id": 14,
+    "triggered_scene_id": 15,
+    "story_text": "input riddle"
+  },
+  {
+    "text": "Continue.",
     "scene_id": 1,
     "triggered_scene_id": 2,
     "story_text": null
+  },
+  {
+    "text": "Sail to Nassau.",
+    "scene_id": 27,
+    "triggered_scene_id": 7,
+    "story_text": "sailed to Nassau"
   }
 ]

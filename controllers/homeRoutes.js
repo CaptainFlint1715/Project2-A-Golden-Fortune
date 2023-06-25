@@ -1,28 +1,13 @@
 const router = require('express').Router();
+const { Sequelize } = require('sequelize');
 const { User, Scene, Choice, CharacterStory, CharacterChoice } = require('../models');
-const withAuth = require('../utils/auth');
+// const withAuth = require('../utils/auth');
 
 // homepage route
 router.get('/', (_, res) => {
   res.render('homepage');
 });
 
-router.get('/scene', async (req, res) => {
-  try {
-    // Fetch all scene data from the database
-    const sceneData = await Scene.findAll();
-
-    // Log the scene data
-    console.log(sceneData);
-
-    // Send a response if needed
-    res.sendStatus(200);
-  } catch (err) {
-    // Handle errors
-    console.error(err);
-    res.sendStatus(500);
-  }
-});
 
 // scene route
 router.get('/scene/:id', async (req, res) => {
@@ -50,52 +35,69 @@ router.get('/scene/:id', async (req, res) => {
 });
 
 
-// user profile route (this will be called on (1) 'return to home' button at the end of an adventure [completed], also (2) after a user is created on sign up, and also (3) when a user logs in)
+// user profile route
 router.get('/profile', async (req, res) => {
-  console.log('hello')
-  console.log(req.session.user_id)
-
+  console.log('hello');
+  console.log(req.session.user_id);
 
   try {
-    const userId = req.session.user_id
-    const userData = await User.findByPk(userId, {
-      attributes: ['name']
-    })
+    const userId = req.session.user_id;
+    const user = await User.findByPk(userId, {
+      attributes: ['name', 'id']
+    });
     const storyData = await CharacterStory.findAll({
       where: {
         user_id: userId,
-      },
-      include: [
-        {
-          model: CharacterChoice,
-          attributes: ['choice_id'],
-          include: {
-            model: Choice,
-            attributes: ['story_text'],
-          },
-        },
-      ],
+      }
+    });
+    const characterStoryIds = storyData.map((story) => story.id);
+
+    const choiceData = await CharacterChoice.findAll({
+      where: {
+        character_story_id: characterStoryIds,
+      }
     });
 
-    const stories = storyData.map((story) => {
-      const characterChoices = story.CharacterChoices.map((characterChoice) =>
-        characterChoice.Choice.story_text
-      );
-      const combinedText = characterChoices.join(', ');
-      return { ...story.get({ plain: true }), combinedText };
+    const textData = await Choice.findAll({
+      where: {
+        id: choiceData.map((choice) => choice.choice_id),
+      }
     });
 
+    const groupedTextData = storyData.map((story) => {
+      const adventureId = story.id;
+      const choices = choiceData
+        .filter((choice) => choice.character_story_id === adventureId)
+        .map((choice) => {
+          const choiceText = textData.find((text) => text.id === choice.choice_id);
+          return choiceText ? choiceText.story_text : '';
+        });
+      return {
+        adventureId,
+        choices,
+      };
+    });
+
+    const userData = user.get({ plain: true });
 
     // Pass serialized data and session flag into template
     res.render('profile', {
-      userData: userData.toJSON(),
-      stories,
+      userData,
+      groupedTextData,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
+    console.error('Error retrieving profile data:', err);
     res.status(500).json(err);
   }
 });
+
+
+
+
+
+
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -108,17 +110,3 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
-// {
-        //   model: CharacterChoice,
-        //   attributes: ['choice_id'],
-        //   where: {
-        //     character_story_id: req.session.character_story_id
-        //   }
-        // },
-        // {
-        //   model: Character,
-        //   attributes: ['name'],
-        //   where: {
-        //     id: req.session.character_id
-        //   }
-        // }
