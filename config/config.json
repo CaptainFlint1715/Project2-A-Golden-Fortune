@@ -1,24 +1,35 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "rje3uh269xyqaymt",
+    "password": "mkjyk1g3c8dd4wgr",
+    "database": "r1k0ybxgur579e3k",
+    "host": "z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": "Amazon RDS"
+    }
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "rje3uh269xyqaymt",
+    "password": "mkjyk1g3c8dd4wgr",
+    "database": "r1k0ybxgur579e3k",
+    "host": "z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": "Amazon RDS"
+    }
   },
   "production": {
     "username": "rje3uh269xyqaymt",
     "password": "mkjyk1g3c8dd4wgr",
     "database": "r1k0ybxgur579e3k",
     "host": "z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "port": 3306,
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": "Amazon RDS"
+    }
   }
 }
-
