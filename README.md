@@ -14,16 +14,16 @@ We utilized express.js, node.js, handlebars.js, and mysql to build a RESTful API
 
 ## Installation
 
-Open the application in command line, type 'npm install'. Next, log in to mysql using 'mysql -u root -p' and then your password. Enter 'source db/schema.sql', press enter, and then enter 'source/db/seeds.sql' and press enter. This will set up the MySQL database. Next you can enter 'node index.js' to start the application.
+NA
 
 ## Usage
 
-You will be presented with a menu containing a list of method options. Based on what you would like to do with the employee database, select an option, and if additional prompts are required, please provide appropriate answers. If you have chosen to display a table and wish to return to the menu, hold Ctrl-C and then reenter 'node index.js'.
+On the homepage, click "login/sign-up", then input username and password (must be at least 5 characters). On the profile page, click "start new adventure" to begin your story. For each scene, read the text to the left and make your choice at the bottom accordingly. When you reach the end of a given storyline, you can click "return to home". On your profile page, you can view past choice sequences you made under "Past Adventures".
 
 ## Contributing
 
-Information on mysql2:
-https://www.npmjs.com/package/mysql2
+Creators:
+Chanse Shirley, Peng Vang, Yusuf Haji, Julissa Ortiz, Oleg Sayenko
 
 ## License
 
@@ -35,16 +35,12 @@ NA
 
 chanseshirley123@gmail.com
 
-[link to video](./assets/video/demovid.webm)
-OR (https://drive.google.com/file/d/1Psb0uKvQywAUHhyR383Wzkllw6DRfm_5/view)
+![homepage](/public/images/demohome.jpg)
+![profile page](/public/images/demoprof.jpg)
+![scene](/public/images/demoscene.jpg)
 
-## Installation:
 GitHub: https://github.com/CaptainFlint1715/Project2-A-Golden-Fortune
-Heroku: Link to web application: 
+Heroku: Link to web application: https://cptflint-a-golden-fortune-87d0447144e5.herokuapp.com/
+
+
   
-## The Creators:
-* Chanse Shirley
-* Tsipeng Vang
-* Yusuf Haji
-* Oleg Sayenko
-* Julissa Ortiz
