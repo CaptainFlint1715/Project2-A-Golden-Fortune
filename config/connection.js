@@ -7,11 +7,11 @@ if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   sequelize = new Sequelize(
-    process.env.DB_NAME || 'r1k0ybxgur579e3k',
-    process.env.DB_USER || 'rje3uh269xyqaymt',
-    process.env.DB_PASSWORD || 'mkjyk1g3c8dd4wgr',
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
     {
-      host: 'z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+      host: 'localhost',
       dialect: 'mysql',
       port: 3306,
     }
