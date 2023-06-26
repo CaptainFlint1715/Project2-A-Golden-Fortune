@@ -1,0 +1,19 @@
+{
+  "multipleImages": [
+    {
+      "src": "assets/img/laptop.jpg",
+      "name": "laptop"
+    },
+    {
+      "src": "assets/img/mobile.jpeg",
+      "name": "mobile"
+    }
+  ],
+  "singleImage": "assets/img/laptop.jpg",
+  "singleImageWithName": [
+    {
+      "src": "assets/img/mobile.jpeg",
+      "name": "mobile"
+    }
+  ]
+}

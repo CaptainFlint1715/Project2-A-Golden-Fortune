@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imgaes</title>
+
+    <style>
+        .image-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .img-thumbnail {
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+    }
+
+    .image-info {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        {{!-- multiple images --}}
+        <div>
+    <h1>Multiple images</h1>
+    <div class="image-container">
+        {{#each multipleImages}}
+        <div class="image-wrapper">
+            <img src="{{this.src}}" class="img-thumbnail" alt="mobile">
+            <div class="image-info">
+                <p>{{this.name}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+        {{!-- Single images --}}
+        <div>
+            <h1>Single Image</h1>
+            <img src="{{singleImage}}" class="img-thumbnail" alt="mobile" style="width: 200px;height: 200px;">
+        </div>
+
+        {{!-- Single images with name--}}
+        <div>
+            <h1>Single Image with name</h1>
+            <img src="{{singleImageWithNameSource}}" class="img-thumbnail" alt="mobile"
+                style="width: 200px;height: 200px;">
+            <h3>{{singleImageWithName}}</h3>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
