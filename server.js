@@ -8,6 +8,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const characterRoutes = require('./characterRoutes');
 
 const routes = require('./controllers');
+const images = require('./SceneData.json');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
@@ -37,6 +38,15 @@ app.set('view engine', 'handlebars');
 app.get("/",(req,res)=>{  
   res.render("login")
 })
+app.get('/images', (req, res) => {
+  res.render('images', {
+    multipleImages: images.multipleImages,
+    singleImage: images.singleImage,
+    singleImageWithNameSource:images.singleImageWithName[0].src,
+    singleImageWithName:images.singleImageWithName[0].name,
+  });
+});
+
 
 app.get("/homepage",(req,res)=>{
   res.render("homepage",{
@@ -57,4 +67,4 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`App listening at http://localhost:${PORT} 🚀`));
 });
-
+app.use(express.static(path.join(__dirname, 'public')));
